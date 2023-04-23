@@ -1,0 +1,367 @@
+<title>Boolean Logic Gates</title>
+<head>
+<style>
+table, th, td {
+  border:1px solid black;
+	text-align: center;
+}
+
+.Title {
+	border: black solid thin;
+	background-color: Turquoise;
+	text-align: center;
+}
+
+.Notation {
+	border: black solid thin;
+	background-color: PaleTurquoise;
+	text-align: center;
+	width: 49.5%;
+	float: left;
+	height: 25%;
+}
+
+.Equation {
+	border: black solid thin;
+	background-color: PaleTurquoise;
+	text-align: center;
+	width: 49.5%;
+	float: right;
+	height: 25%;
+}
+
+.Table {
+	border: black solid thin;
+	background-color: PaleTurquoise;
+	text-align: center;
+	width: 49.5%;
+	float: left;
+	
+	table-align: center;
+}
+
+.Circuit {
+	border: black solid thin;
+	background-color: PaleTurquoise;
+	text-align: center;
+	width: 49.5%;
+	float: right;
+}	
+	
+</style>
+</head>
+
+<body style = "background-color: CadetBlue;" >
+	<div span class = "Title">
+	<h1>Boolean Logic</h1>
+	</div>
+
+	<div span class = "Notation">
+	<h3>Psuedocode notation</h3>
+
+	(A AND (B OR C)) AND NOT D
+
+		</div>
+
+
+	<div span class = "Equation">	
+	<h3>Algrebraic equation</h3>
+	(A . (B + C)) . Ḋ
+	</div>
+
+	<div span class = "Table">	
+	<h3>Truth Table</h3>
+	<table>	
+	<tr>
+		<th>A</th>
+		<th>B</th>
+		<th>C</th>
+		<th>D</th>
+		<th>NOT D</th>
+		<th>B OR C</th>
+		<th>A AND (B OR C)</th>
+		<th>(A AND (B OR C)) AND NOT D</th>
+	</tr>
+
+	<tr>
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+	</tr>
+
+	<tr>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+		<td>1</td>
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+	</tr>
+
+	<tr>
+		<td>0</td>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>1</td>
+		<td>1</td>
+		<td>0</td>
+	</tr>
+
+	<tr>
+		<td>0</td>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+	</tr>
+
+	<tr>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+	</tr>
+
+	<tr>
+		<td>0</td>
+		<td>0</td>
+		<td>1</td>
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+	</tr>
+
+	<tr>
+		<td>0</td>
+		<td>0</td>
+		<td>1</td>
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+	</tr>
+
+	<tr>
+		<td>0</td>
+		<td>1</td>
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+	</tr>
+
+	<tr>
+		<td>1</td>
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+		<td>1</td>
+		<td>1</td>
+		<td>1</td>
+		<td>0</td>
+	</tr>
+
+	<tr>
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+	</tr>
+
+	<tr>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+	</tr>
+
+	<tr>
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>1</td>
+		<td>1</td>
+		<td>0</td>
+	</tr>
+
+	<tr>
+		<td>1</td>
+		<td>1</td>
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>1</td>
+		<td>1</td>
+		<td>0</td>
+	</tr>
+
+	<tr>
+		<td>0</td>
+		<td>0</td>
+		<td>1</td>
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+	</tr>
+
+	<tr>
+		<td>1</td>
+		<td>1</td>
+		<td>1</td>
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>1</td>
+		<td>1</td>
+	</tr>
+
+	<tr>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+	</tr>
+
+	<tr>
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+	</tr>
+
+	<tr>
+		<td>1</td>
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>1</td>
+		<td>1</td>
+	</tr>
+		
+	</table>
+	</div>
+		
+	<div span class = "Circuit">	
+	<h3>Logic Circuit</h3>
+		<canvas id = "circuit" width = 600px height = 300px></canvas>
+		<script>
+			var canvas = document.getElementById("circuit");
+			var pen = canvas.getContext("2d");
+			pen.font = "20px Arial";
+			pen.strokeText("A", 30, 60)
+			pen.strokeText("B", 30, 100)
+			pen.strokeText("C", 30, 140)
+			pen.strokeText("D", 30, 180)
+			pen.beginPath()
+			pen.moveTo(45,55)
+			pen.lineTo(160, 55)
+			pen.lineTo(160, 85)
+			pen.lineTo(175, 85)
+
+			pen.moveTo(45, 95)
+			pen.lineTo(95, 95)
+			pen.lineTo(95, 110)
+			pen.lineTo(115, 110)
+
+			pen.moveTo(45, 135)
+			pen.lineTo(95, 135)
+			pen.lineTo(95, 120)
+			pen.lineTo(115, 120)
+			pen.moveTo(108, 105)
+			pen.arc(108, 115, 10, 1.5 * Math.PI, 0.5 * Math.PI)
+			pen.moveTo(108, 105)
+			pen.lineTo(135, 105)
+			pen.arc(135, 115, 10, 1.5 * Math.PI, 0.5 * Math.PI)
+			pen.moveTo(108, 125)
+			pen.lineTo(135, 125)
+			pen.moveTo(145, 115)
+			pen.lineTo(160, 115)
+			pen.lineTo(160, 95)
+			pen.lineTo(175, 95)
+
+			pen.moveTo(175, 80)
+			pen.lineTo(175, 100)
+			pen.lineTo(195, 100)
+			pen.moveTo(175, 80)
+			pen.lineTo(195, 80)
+			pen.arc(195, 90, 10, 1.5 * Math.PI, 0.5 * Math.PI)
+			pen.moveTo(205, 90)
+			pen.lineTo(220, 90)
+			pen.lineTo(220, 130)
+			pen.lineTo(240, 130)
+			
+			
+
+
+			pen.moveTo(45, 175)
+			pen.lineTo(105, 175)
+			pen.moveTo(105, 160)
+			pen.lineTo(105, 190)
+			pen.lineTo(120, 175)
+			pen.lineTo(105, 160)
+			pen.moveTo(123, 175)
+			pen.arc(123, 175, 3, 0, 2 * Math.PI);
+			pen.moveTo(126, 175)
+			pen.lineTo(220, 175)
+			pen.lineTo(220, 140)
+			pen.lineTo(240, 140)
+
+			pen.moveTo(240, 125)
+			pen.lineTo(240, 145)
+			pen.lineTo(260, 145)
+			pen.moveTo(240, 125)
+			pen.lineTo(260, 125)
+			pen.arc(260, 135, 10, 1.5 * Math.PI, 0.5 * Math.PI);
+			pen.moveTo(270, 135)
+			pen.lineTo(290, 135)
+			
+			pen.stroke()
+		</script>
+	</div>
+	
+</body>
+
+		
